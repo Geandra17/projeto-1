@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo a maquiagem!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f769b0;
+        }
+        h1 {
+            color: #f5f10c;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #f8f7f7;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #ec2ba2;
+            color: rgb(241, 205, 40);
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #f50eb0;
+        }
+        #idade-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            background-color: #ff5ebc;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #fff134e1;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        .image-container img {
+            width: 400px; /* Define a largura fixa da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Conhecendo a maquiagem!!</h1>
+    <p></p>
+    <p id="meuParagrafo">Maquiagem (português europeu) ou maquilagem, maquiagem (português brasileiro) (do francês maquillage) consiste na aplicação de produtos com efeito cosmético, de embelezamento, ou disfarce, seguindo-se alguns casos os ditames da moda e com uso de substâncias especificamente destinadas a tal fim.</p>
+
+    <P></P>
+    <p>A maquiagem, assim como os cosméticos, é muito antiga, provavelmente utilizada desde a Pré-história para a prática de rituais xamânicos, cultos funerários ou cultos à fertilidade</p>
+    <P></P>
+    <p>Três mil anos antes de Jesus Cristo, os egípcios já conheciam a maquiagem: batom, maquiagem branqueadora e de luminosidade, maquiagem para reforçar os olhos e sobrancelhas (a base de chumbo, malaquita, antimônio, Kohl), blush para corar as bochechas (a partir de produtos vegetais, como pétalas de rosa ou de papoulas; animais, como larva de cochonilha; ou mineral, como argilas, óxido de cobre ou ferro ocre), pós que eram misturados com óleos ou pomadas. Outros pigmentos também eram utilizados para a maquiagem: o azul do óxido de cobre, o amarelo do auripigmento, o preto do carbono, o verde da malaquita e mais numerosas nuances obtidas dos óxidos de cobre ou ferro</p>
+    <P></P>
+    
+    <div id="idade-container">
+        <button onclick="verificarIdade()">Verifique sua idade para trabalhar com a maquiagem</button>
+        <p id="mensagemIdade"></p>
+    </div>
+    <button onclick="alterarConteudo()">Observe a imagem abaixo</button>
+
+    <div class="image-container">
+        <h2>Imagem da Cleopata</h2>
+        <img src="imagemdacleopata (1).jpg" alt="Exemplo de Imagem">
+    </div>
+
+    <ul id="listaNumeros">
+        <!-- Números de 1 a 10 serão exibidos aqui -->
+    </ul>
+
+    <script>
+        // Função para alterar o conteúdo do parágrafo
+        function alterarConteudo() {
+            document.getElementById("meuParagrafo").innerText = "O conteúdo do parágrafo foi alterado!";
+        }
+
+        // Função para verificar a idade do usuário e exibir uma mensagem
+        function verificarIdade() {
+            let idade = prompt("Por favor, insira sua idade:");
+            let mensagem = idade >= 18 ? "Você é maior de idade." : "Você é menor de idade.";
+            document.getElementById("mensagemIdade").innerText = mensagem;
+        }
+        
+
+        // Exibir uma lista de números de 1 a 10
+       
+            
+
+        // Chama a função para exibir os números assim que a página carregar
+        window.onload = exibirNumeros;
+    </script>
+</body>
+</html>
+
+
